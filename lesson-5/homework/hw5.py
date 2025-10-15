@@ -62,7 +62,7 @@ Solution 2 without if-else statement.
 
 #Ответы:
 
-🧮 1. Leap Year Function
+1. Leap Year Function
 def is_leap(year):
     """
     Determines whether a given year is a leap year.
@@ -82,7 +82,7 @@ print(is_leap(2024))  # True
 print(is_leap(1900))  # False
 print(is_leap(2000))  # True
 
-⚙️ 2. Conditional Statements Exercise
+2. Conditional Statements Exercise
 n = int(input("Enter a number: "))
 
 if n % 2 != 0:
@@ -95,15 +95,15 @@ else:
     print("Not Weird")
 
 
-🧾 Примеры:
+Примеры:
 
 Ввод	Вывод
 3	Weird
 4	Not Weird
 10	Weird
 22	Not Weird
-🔢 3. Even Numbers Between a and b (без цикла)
-✅ Solution 1: with if–else
+ 3. Even Numbers Between a and b (без цикла)
+ Solution 1: with if–else
 a = int(input("Enter a: "))
 b = int(input("Enter b: "))
 
@@ -115,13 +115,13 @@ evens = list(range(a + (a % 2), b + 1, 2))
 print(evens)
 
 
-🧠 Логика:
+ Логика:
 
 a + (a % 2) делает a чётным стартом.
 
 range(..., ..., 2) идёт с шагом 2 без цикла for.
 
-✅ Solution 2: without if–else
+ Solution 2: without if–else
 a = int(input("Enter a: "))
 b = int(input("Enter b: "))
 
@@ -129,7 +129,7 @@ evens = list(range(min(a, b) + (min(a, b) % 2), max(a, b) + 1, 2))
 print(evens)
 
 
-📘 Этот способ делает то же самое, но без использования if–else,
+Этот способ делает то же самое, но без использования if–else,
 используя только функции min() и max().
 
 
