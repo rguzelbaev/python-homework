@@ -18,9 +18,9 @@ import pytz
 import re
 import time
 
-# ----------------------------------------------------
-# 1️⃣ AGE CALCULATOR
-# ----------------------------------------------------
+
+# 1 AGE CALCULATOR
+
 def age_calculator():
     birth_str = input("Введите дату рождения (YYYY-MM-DD): ")
     birth_date = datetime.strptime(birth_str, "%Y-%m-%d").date()
@@ -38,9 +38,9 @@ def age_calculator():
 
     print(f"Ваш возраст: {years} лет, {months} месяцев, {days} дней")
 
-# ----------------------------------------------------
-# 2️⃣ DAYS UNTIL NEXT BIRTHDAY
-# ----------------------------------------------------
+
+#2 DAYS UNTIL NEXT BIRTHDAY
+
 def days_until_birthday():
     birth_str = input("Введите дату рождения (YYYY-MM-DD): ")
     birth_date = datetime.strptime(birth_str, "%Y-%m-%d").date()
@@ -51,9 +51,8 @@ def days_until_birthday():
     days_left = (next_birthday - today).days
     print(f"До следующего дня рождения осталось: {days_left} дней")
 
-# ----------------------------------------------------
-# 3️⃣ MEETING SCHEDULER
-# ----------------------------------------------------
+
+#3 MEETING SCHEDULER
 def meeting_scheduler():
     current_str = input("Введите текущие дату и время (YYYY-MM-DD HH:MM): ")
     duration_hours = int(input("Введите длительность встречи (часы): "))
@@ -62,9 +61,9 @@ def meeting_scheduler():
     end_time = current_dt + timedelta(hours=duration_hours, minutes=duration_minutes)
     print("Встреча закончится в:", end_time.strftime("%Y-%m-%d %H:%M"))
 
-# ----------------------------------------------------
-# 4️⃣ TIMEZONE CONVERTER
-# ----------------------------------------------------
+
+# 4 TIMEZONE CONVERTER
+
 def timezone_converter():
     dt_str = input("Введите дату и время (YYYY-MM-DD HH:MM): ")
     from_zone = input("Введите ваш текущий timezone (например, Asia/Tashkent): ")
@@ -79,9 +78,9 @@ def timezone_converter():
 
     print("Время в выбранной зоне:", target_dt.strftime("%Y-%m-%d %H:%M (%Z)"))
 
-# ----------------------------------------------------
-# 5️⃣ COUNTDOWN TIMER
-# ----------------------------------------------------
+
+# 5 COUNTDOWN TIMER
+
 def countdown_timer():
     future_str = input("Введите будущее время (YYYY-MM-DD HH:MM:SS): ")
     future_time = datetime.strptime(future_str, "%Y-%m-%d %H:%M:%S")
@@ -95,9 +94,9 @@ def countdown_timer():
         print(f"\rОсталось: {diff}", end="")
         time.sleep(1)
 
-# ----------------------------------------------------
-# 6️⃣ EMAIL VALIDATOR
-# ----------------------------------------------------
+
+# 6 EMAIL VALIDATOR
+
 def email_validator():
     email = input("Введите email: ")
     pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
@@ -106,9 +105,9 @@ def email_validator():
     else:
         print("❌ Некорректный email")
 
-# ----------------------------------------------------
-# 7️⃣ PHONE NUMBER FORMATTER
-# ----------------------------------------------------
+
+# 7 PHONE NUMBER FORMATTER
+
 def phone_formatter():
     phone = input("Введите номер (только цифры): ")
     digits = re.sub(r'\D', '', phone)
@@ -118,9 +117,9 @@ def phone_formatter():
     else:
         print("❌ Номер должен содержать 10 цифр")
 
-# ----------------------------------------------------
-# 8️⃣ PASSWORD STRENGTH CHECKER
-# ----------------------------------------------------
+
+# 8 PASSWORD STRENGTH CHECKER
+
 def password_checker():
     pwd = input("Введите пароль: ")
     strong = True
@@ -139,18 +138,18 @@ def password_checker():
     if strong:
         print("✅ Пароль надёжный")
 
-# ----------------------------------------------------
-# 9️⃣ WORD FINDER
-# ----------------------------------------------------
+
+# 9 WORD FINDER
+
 def word_finder():
     text = """Python is great. Python is powerful and easy to learn. I love Python!"""
     word = input("Введите слово для поиска: ")
     matches = re.findall(word, text, re.IGNORECASE)
     print(f"Слово '{word}' встречается {len(matches)} раз(а).")
 
-# ----------------------------------------------------
-# 🔟 DATE EXTRACTOR
-# ----------------------------------------------------
+
+# 10 DATE EXTRACTOR
+
 def date_extractor():
     text = input("Введите текст, содержащий даты: ")
     pattern = r'\b\d{2}/\d{2}/\d{4}\b'
@@ -160,9 +159,9 @@ def date_extractor():
     else:
         print("Даты не найдены.")
 
-# ----------------------------------------------------
+
 # Меню выбора задачи
-# ----------------------------------------------------
+
 def main():
     tasks = {
         "1": age_calculator,
